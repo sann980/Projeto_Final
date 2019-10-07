@@ -6,40 +6,43 @@
 package projetofinaldecurso;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Conservix
  */
-public class Cadastrando extends DadosCadastros{
+public class CadastroDeAluno extends Dados{
     
     Scanner tec = new Scanner(System.in);
-
+    //ATRIBUTO DO TIPO VETOR DADOS
+    
+    //METODO CADASTRO DE ALUNOS
     public void cadastroDeAluno(){
         System.out.println("Nome do Aluno: ");
-        nome = tec.nextLine();
+        this.setNome(tec.nextLine());
         System.out.println("Data de Nacimento: ");
-        dataDeNascimento = tec.nextLine();
+        this.setDataDeNascimento(tec.nextLine());
         System.out.println("Naturalidade: ");
-        naturalidade = tec.nextLine();
+        this.setNaturalidade(tec.nextLine());
         System.out.println("UF: ");
-        uf = tec.nextLine();
+        this.setUf(tec.nextLine());
         System.out.println("Certidão de Nascimento Nº: ");
-        certidaoDeNascimento = tec.nextLine();
+        this.setCertidaoDeNascimento(tec.nextLine());
         System.out.println("Folha Nº: ");
-        folha = Integer.parseInt(tec.nextLine());
+        this.setFolha(Integer.parseInt(tec.nextLine()));
         System.out.println("Livro Nº: ");
-        livro = tec.nextLine();
+        this.setLivro(tec.nextLine());
         System.out.println("Sexo: ");
-        sexo = tec.nextLine();
+        this.setSexo(tec.nextLine());
         System.out.println("RG: ");
-        rg = tec.nextLong();
+        this.setRg(tec.nextLong());
         System.out.println("Orgão expedidor: ");
-        orgaoExpedidor = tec.nextLine();
+        this.setOrgaoExpedidor(tec.nextLine());
         System.out.println("Data de expedição: ");
-        dataDeExpedicao = tec.nextLine();
+        this.setDataDeExpedicao(tec.nextLine());
         System.out.println("CPF: ");
-        cpf = tec.nextDouble();
+        setCpf(tec.nextDouble());
     }
-    
+        
 }

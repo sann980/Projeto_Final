@@ -16,9 +16,8 @@ public class ProjetoFinalDeCurso {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Cadastrando c = new Cadastrando();
-        
-        c.cadastroDeAluno();
+        CadastroResponsavel_Pagamento c = new CadastroResponsavel_Pagamento();
+        c.cadastroDoResponsavel_Pagamento();
     }
     
 }

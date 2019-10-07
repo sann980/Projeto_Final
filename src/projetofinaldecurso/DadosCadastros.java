@@ -24,16 +24,13 @@ public abstract class DadosCadastros{
     protected String orgaoExpedidor;
     protected String dataDeExpedicao;
     protected double cpf;
-    protected String nomePai;
-    protected String nomeMae;
-    protected String profisaoPai;
-    protected String profissaoMae;
+    protected String profisao;
     protected double telefone;
     protected double celular;
-    protected String responsavel;
     protected String endereco;
     protected double cep;
     protected String bairro;
     protected String cidade;
     protected String estado;
+    
 }
