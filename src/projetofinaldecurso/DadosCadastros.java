@@ -11,7 +11,6 @@ package projetofinaldecurso;
  */
 public abstract class DadosCadastros{
     //ATRIBUTOS
-    
     protected String nome;
     protected String dataDeNascimento;
     protected String naturalidade;
