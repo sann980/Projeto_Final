@@ -21,5 +21,16 @@ public abstract class DadosCadastros{
     protected String bairro;
     protected String cidade;
     protected String estado;
-    
+    protected String profisao;
+    protected String orgaoExpedidor;
+    protected String dataDeExpedicao;
+    protected int codigoDeMatricula;
+    protected String dataDeNascimento;
+    protected String naturalidade;
+    protected String uf;
+    protected String certidaoDeNascimento;
+    protected int folha;
+    protected String livro;
+    protected String sexo;
+    protected boolean res ;
 }

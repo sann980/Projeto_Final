@@ -15,136 +15,48 @@ import java.util.logging.Logger;
 public class CadastroDeAluno extends Dados{
     
     Scanner tec = new Scanner(System.in);
-    
-    //ATRIBUTOS
-    private int codigoDeMatricula;
-    private String dataDeNascimento;
-    private String naturalidade;
-    private String uf;
-    private String certidaoDeNascimento;
-    private int folha;
-    private String livro;
-    private String sexo;
-    private String orgaoExpedidor;
-    private String dataDeExpedicao;
-    
-    //ATRIBUTO DO TIPO VETOR DADOS
-    
-    //METODOS GETs
-    public Scanner getTec(){
-        return tec;
-    }
 
-    public int getCodigoDeMatricula() {
-        return codigoDeMatricula;
-    }
-
-    public String getDataDeNascimento() {
-        return dataDeNascimento;
-    }
-
-    public String getNaturalidade() {
-        return naturalidade;
-    }
-
-    public String getUf() {
-        return uf;
-    }
-
-    public String getCertidaoDeNascimento() {
-        return certidaoDeNascimento;
-    }
-
-    public int getFolha() {
-        return folha;
-    }
-
-    public String getLivro() {
-        return livro;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public String getOrgaoExpedidor() {
-        return orgaoExpedidor;
-    }
-
-    public String getDataDeExpedicao() {
-        return dataDeExpedicao;
-    }
-    
-    //MTODOS SETs
-    public void setTec(Scanner tec) {
-        this.tec = tec;
-    }
-
-    public void setCodigoDeMatricula(int codigoDeMatricula) {
-        this.codigoDeMatricula = codigoDeMatricula;
-    }
-
-    public void setDataDeNascimento(String dataDeNascimento) {
-        this.dataDeNascimento = dataDeNascimento;
-    }
-
-    public void setNaturalidade(String naturalidade) {
-        this.naturalidade = naturalidade;
-    }
-
-    public void setUf(String uf) {
-        this.uf = uf;
-    }
-
-    public void setCertidaoDeNascimento(String certidaoDeNascimento) {
-        this.certidaoDeNascimento = certidaoDeNascimento;
-    }
-
-    public void setFolha(int folha) {
-        this.folha = folha;
-    }
-
-    public void setLivro(String livro) {
-        this.livro = livro;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public void setOrgaoExpedidor(String orgaoExpedidor) {
-        this.orgaoExpedidor = orgaoExpedidor;
-    }
-
-    public void setDataDeExpedicao(String dataDeExpedicao) {
-        this.dataDeExpedicao = dataDeExpedicao;
+    public CadastroDeAluno() {
+         for(int i = 0; i<dad.length; i++){
+            dad[i] = new Dados();     
+        }
+        this.res = false;
     }
     
     //METODO CADASTRO DE ALUNOS
     public void cadastroDeAluno() { //INICIO DO METODO
-        System.out.println("Nome do Aluno: ");
-        this.setNome(tec.nextLine());
-        System.out.println("Data de Nacimento: ");
-        this.setDataDeNascimento(tec.nextLine());
-        System.out.println("Naturalidade: ");
-        this.setNaturalidade(tec.nextLine());
-        System.out.println("UF: ");
-        this.setUf(tec.nextLine());
-        System.out.println("Certidão de Nascimento Nº: ");
-        this.setCertidaoDeNascimento(tec.nextLine());
-        System.out.println("Folha Nº: ");
-        this.setFolha(Integer.parseInt(tec.nextLine()));
-        System.out.println("Livro Nº: ");
-        this.setLivro(tec.nextLine());
-        System.out.println("Sexo: ");
-        this.setSexo(tec.nextLine());
-        System.out.println("RG: ");
-        this.setRg(Double.parseDouble(tec.nextLine()));
-        System.out.println("Orgão expedidor: ");
-        this.setOrgaoExpedidor(tec.nextLine());
-        System.out.println("Data de expedição: ");
-        this.setDataDeExpedicao(tec.nextLine());
-        System.out.println("CPF: ");
-        setCpf(Double.parseDouble(tec.nextLine()));
+        for (Dados dad1 : dad) {
+            if (dad1 != null) {
+                res= false;
+                System.out.println("Nome do Aluno: ");
+                dad1.setNome(tec.nextLine());
+                System.out.println("Data de Nacimento: ");
+                dad1.setDataDeNascimento(tec.nextLine());
+                System.out.println("Naturalidade: ");
+                dad1.setNaturalidade(tec.nextLine());
+                System.out.println("UF: ");
+                dad1.setUf(tec.nextLine());
+                System.out.println("Certidão de Nascimento Nº: ");
+                dad1.setCertidaoDeNascimento(tec.nextLine());
+                System.out.println("Folha Nº: ");
+                dad1.setFolha(Integer.parseInt(tec.nextLine()));
+                System.out.println("Livro Nº: ");
+                dad1.setLivro(tec.nextLine());
+                System.out.println("Sexo: ");
+                dad1.setSexo(tec.nextLine());
+                System.out.println("RG: ");
+                dad1.setRg(Double.parseDouble(tec.nextLine()));
+                System.out.println("Orgão expedidor: ");
+                dad1.setOrgaoExpedidor(tec.nextLine());
+                System.out.println("Data de expedição: ");
+                dad1.setDataDeExpedicao(tec.nextLine());
+                System.out.println("CPF: ");
+                setCpf(Double.parseDouble(tec.nextLine()));
+                this.Quebra_Loop();
+                if(res){
+                    break;
+                }
+            }
+        }
     } //FIM DO METODO
 }
