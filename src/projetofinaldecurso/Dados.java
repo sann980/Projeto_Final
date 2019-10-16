@@ -190,7 +190,8 @@ public class Dados extends DadosCadastros{
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-    // funcoes
+    
+    // Metodos funcoes
 Scanner tec = new Scanner(System.in);
 
      public void Listar_ResPga(){// metodo listar contatos
@@ -246,6 +247,3 @@ if(cont == 0){
              System.out.println("Adicionando outro");
         }
 }
-
-
-
