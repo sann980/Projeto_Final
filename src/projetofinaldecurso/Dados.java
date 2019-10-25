@@ -1,3 +1,5 @@
+//---------- CLASSE DO TIPO DADOS ----------------
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,16 +13,10 @@ import java.util.Scanner;
  *
  * @author Conservix
  */
-public class Dados extends DadosCadastros{
+public class Dados extends DadosCadastrais{
    
     Dados dad[] = new Dados[10]; 
    
-    public Dados(){
-       //for(int i = 0 ; i< dad.length;i ++)
-       //{ dad[i] = new Dados ();
-   //}
-       
-   }
     //Metodos SETs
     public void setNome(String nome) {
         this.nome = nome;
@@ -192,54 +188,13 @@ public class Dados extends DadosCadastros{
     }
     
     // Metodos funcoes
-Scanner tec = new Scanner(System.in);
+Scanner in = new Scanner(System.in);
 
-     public void Listar_ResPga(){// metodo listar contatos
-        for (Dados dad1 : dad) {
-            if (dad1.getNome() != null) {
-                System.out.println("_______________");
-            System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
-        }
-        }
-}
-     // pesquisa contato
-     public void PesquisaResponsavel(){
-        int cont =0;
-        System.out.println("Digite o nome a ser perquisado ");
-        String resp = tec.nextLine();
-        for(Dados dad1 : dad){
-        if(resp.equals(dad1.getNome()) ){
-           System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
-        cont ++;
-        }
-        }if(cont == 0){
-             System.out.println("o nome não corresponde a nenhum resgistro ");
-        }
-    }
-     // apagar dados de um contato
-    public void ApagarDados (){
-         int cont =0;
-        System.out.println("Digite o nome a ser perquisado pra excluir ");
-        String resp = tec.nextLine();
-        for (Dados dad1 : dad) {
-            if (resp.equals(dad1.getNome())) {
-                dad1.setNome(null);
-                dad1.setRg(0);
-                dad1.setCpf(0);
-                dad1.setProfisao(null);
-                System.out.println("Contato excluido com sucesso");
-                cont ++;
-            }
-        }
-if(cont == 0){
-             System.out.println("o nome não corresponde a nenhum resgistro ");
-        }
-    }
      // mtedo pra quebra um loop
     protected void Quebra_Loop(){
          String a ="s"; 
        System.out.println("Deseja adiociona outro (Se sim digite qualquer teclar //n pra sair) ");
-                a =  tec.nextLine();
+                a =  in.nextLine();
         if("n".equals(a)||"N".equals(a)) {
            System.out.println("Saindo....");
             res = true;   

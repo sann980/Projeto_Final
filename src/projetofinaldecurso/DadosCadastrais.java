@@ -9,7 +9,7 @@ package projetofinaldecurso;
  *
  * @author Conservix
  */
-public abstract class DadosCadastros{
+public abstract class DadosCadastrais{
     //ATRIBUTOS
     protected String nome;   
     protected double rg;

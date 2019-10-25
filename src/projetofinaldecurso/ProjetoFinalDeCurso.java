@@ -16,17 +16,18 @@ public class ProjetoFinalDeCurso {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        CadastroResponsavel_Pagamento c = new CadastroResponsavel_Pagamento();
-        Cadastro_Pai a = new Cadastro_Pai();
-        c.cadastroDoResponsavel_Pagamento();
         
-        c.Listar_ResPga();
-        a.cadastroDoResponsavel_Pai();
-        c.PesquisaResponsavel();
+        Alunos ca = new Alunos();
+        Funcionarios cf = new Funcionarios();
+        Mae cm = new Mae();
+        Pai cp = new Pai();
+        ResponsavelContratual cr = new ResponsavelContratual();
         
-        c.ApagarDados();
-        
-        c.Listar_ResPga();
-        a.Listar_ResPga();  
+        ca.cadastrar();
+        ca.listar();
+        ca.buscar();
+        ca.excuir();
+        ca.buscar();
+        ca.listar();
     }
 }

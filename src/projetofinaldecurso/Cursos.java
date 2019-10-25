@@ -1,3 +1,5 @@
+//---------- CLASSE PARA CADASTROS DOS CURSO ----------------
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,11 +7,14 @@
  */
 package projetofinaldecurso;
 
+import java.util.Scanner;
+
 /**
  *
  * @author lima
  */
-public class Cursos {
+public class Cursos implements Funcionalidades{
+    //ATRIBUTOS
     private int NumCurso;
     private double valor ;
     private String nomeDoCurso;
@@ -18,13 +23,17 @@ public class Cursos {
     private int QuantVagas;
     private String turno;
     
-Cursos curso[] = new Cursos [10];
+    Scanner in = new Scanner(System.in);
+Cursos curso[] = new Cursos [10]; //ISTANCIANDO UM NOVO VETOR DO TIPO CURSOS
+
+    //METODO CONSTRUTOR
     public Cursos() {
         for(int i = 0 ;i < curso.length; i++){
             curso[i]= new Cursos();
         }
-    }
+    }      //FIM DO METODO
 
+    //METODOS GETs E SETs
     public double getValor() {
         return valor;
     }
@@ -72,13 +81,25 @@ Cursos curso[] = new Cursos [10];
     public void setTurno(String turno) {
         this.turno = turno;
     }
-    
-  
-    public void cadastrarCursos () {
+
+    //CUNCIONALIDADES DA INTERFACE
+    @Override
+    public void cadastrar() {
         
+    }
+
+    @Override
+    public void buscar() {
         
+    }
+
+    @Override
+    public void listar() {
         
-        
+    }
+
+    @Override
+    public void excuir() {
         
     }
 }
