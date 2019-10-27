@@ -34,6 +34,12 @@ public class Alunos extends Dados implements Funcionalidades{
                 res= false;
                 System.out.println("Nome do Aluno: ");
                 dad1.setNome(in.nextLine());
+                System.out.println("Sexo: ");
+                dad1.setSexo(in.nextLine());
+                System.out.println("Reside com: ");
+                dad1.setReside(in.nextLine());
+                System.out.println("Telefone: ");
+                dad1.setTelefone(in.nextDouble());
                 System.out.println("Data de Nacimento: ");
                 dad1.setDataDeNascimento(in.nextLine());
                 System.out.println("Naturalidade: ");
@@ -46,8 +52,6 @@ public class Alunos extends Dados implements Funcionalidades{
                 dad1.setFolha(Integer.parseInt(in.nextLine()));
                 System.out.println("Livro Nº: ");
                 dad1.setLivro(in.nextLine());
-                System.out.println("Sexo: ");
-                dad1.setSexo(in.nextLine());
                 System.out.println("RG: ");
                 dad1.setRg(Double.parseDouble(in.nextLine()));
                 System.out.println("Orgão expedidor: ");

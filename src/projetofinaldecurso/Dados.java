@@ -17,7 +17,7 @@ public class Dados extends DadosCadastrais{
    
     Dados dad[] = new Dados[10]; 
    
-    //Metodos SETs
+    //Metodos SETs e GETs
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -39,7 +39,7 @@ public class Dados extends DadosCadastrais{
     }
 
     public void setEndereco(String endereco) {
-        this.endereco = endereco;
+        this.rua = endereco;
     }
 
     public void setCep(double cep) {
@@ -56,6 +56,18 @@ public class Dados extends DadosCadastrais{
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public void setReside(String reside) {
+        this.reside = reside;
+    }
+
+    public void setRes(boolean res) {
+        this.res = res;
     }
     
     //METODOS GETs
@@ -77,10 +89,6 @@ public class Dados extends DadosCadastrais{
 
     public double getCelular() {
         return celular;
-    }
-
-    public String getEndereco() {
-        return endereco;
     }
 
     public double getCep() {
@@ -183,8 +191,28 @@ public class Dados extends DadosCadastrais{
         return sexo;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public String getReside() {
+        return reside;
+    }
+
+    public boolean isRes() {
+        return res;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getRua() {
+        return rua;
     }
     
     // Metodos funcoes

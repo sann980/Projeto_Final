@@ -33,6 +33,10 @@ public class Mae extends Dados implements Funcionalidades{
                 res= false;
                 System.out.println("Nome da mãe:");
                 dad1.setNome(in.nextLine());
+                System.out.println("Rua: ");
+                dad1.setRua(in.nextLine());
+                System.out.println("Número: ");
+                dad1.setNumero(Integer.parseInt(in.nextLine()));
                 System.out.println("RG: ");
                 dad1.setRg(Double.parseDouble(in.nextLine()));
                 System.out.println("Orgão expedidor: ");

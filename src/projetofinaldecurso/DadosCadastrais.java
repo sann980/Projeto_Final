@@ -11,12 +11,17 @@ package projetofinaldecurso;
  */
 public abstract class DadosCadastrais{
     //ATRIBUTOS
-    protected String nome;   
+    protected String nome;
+    protected String sexo;
+    protected double telefone;
+    protected String dataDeNascimento;
+    protected String reside;
+    protected String uf;
     protected double rg;
     protected double cpf;
-    protected double telefone;
     protected double celular;
-    protected String endereco;
+    protected String rua;
+    protected int numero;
     protected double cep;
     protected String bairro;
     protected String cidade;
@@ -25,12 +30,9 @@ public abstract class DadosCadastrais{
     protected String orgaoExpedidor;
     protected String dataDeExpedicao;
     protected int codigoDeMatricula;
-    protected String dataDeNascimento;
     protected String naturalidade;
-    protected String uf;
     protected String certidaoDeNascimento;
     protected int folha;
     protected String livro;
-    protected String sexo;
     protected boolean res ;
 }
