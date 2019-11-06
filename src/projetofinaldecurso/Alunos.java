@@ -7,16 +7,11 @@
  */
 package projetofinaldecurso;
 
-import java.util.Scanner;
-import java.util.logging.Logger;
-
 /**
  *
  * @author Conservix
  */
 public class Alunos extends Dados implements Funcionalidades{
-    
-    Scanner in = new Scanner(System.in);
 
     //METODO CONSTRUTOR
     public Alunos() {
@@ -27,11 +22,11 @@ public class Alunos extends Dados implements Funcionalidades{
     } //FIM DO METODO
 
     //FUNCIONALIDADES DA INTERFACE
-    @Override
+    @Override //INÍCIO DO METODO CADASTRAR ALUNOS
     public void cadastrar() {
         for (Dados dad1 : dad) {
             if (dad1 != null) {
-                res= false;
+                res = false;
                 System.out.println("Nome do Aluno: ");
                 dad1.setNome(in.nextLine());
                 System.out.println("Sexo: ");
@@ -66,36 +61,49 @@ public class Alunos extends Dados implements Funcionalidades{
                 }
             }
         }
-    }
+    } //FIM DO METODO CADASTRAR ALUNOS
 
-    @Override
+    @Override //INÍCIO DO METODO BUSCAR ALUNO
     public void buscar() {
         int cont =0;
         System.out.println("Digite o nome a ser perquisado ");
         String resp = in.nextLine();
         for(Dados dad1 : dad){
         if(resp.equals(dad1.getNome()) ){
-           System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
+           System.out.println("Nome do aluno: " +dad1.getNome() + "     Sexo: " +dad1.getSexo() + 
+                   "\nReside com: " +dad1.getReside() + "   Telefone: " +dad1.getTelefone() +
+                   "\nNascimento em: " +dad1.getDataDeNascimento() + "      Natural de: " +dad1.getNaturalidade() +
+                   "    UF: " +dad1.getUf() + "\nCertidão de nascimento Nº: " +dad1.getCertidaoDeNascimento() +
+                   "    Folha Nº: " +dad1.getFolha() + "    Livro Nº: " +dad1.getLivro() + 
+                   "    RG: " +dad1.getRg() + "    Orgão expedidor: " +dad1.getOrgaoExpedidor() + 
+                   "    Data de expedição: " +dad1.getDataDeExpedicao() + "\nCPF: " +dad1.getCpf());
         cont ++;
         }
         }if(cont == 0){
              System.out.println("o nome não corresponde a nenhum resgistro ");
         }
-    }
+    } //FIM DO METODO BUSCAR ALUNO
 
-    @Override
+    @Override //INÍCIO DO METODO LISTAR ALUNOS
     public void listar() {
+        System.out.println("#### LISTA DE TODOS OS CADASTROS ####");
     for (Dados dad1 : dad) {
             if (dad1.getNome() != null) {
-                System.out.println("_______________");
-            System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
+                System.out.println("________________________");
+                System.out.println("Nome do aluno: " +dad1.getNome() + "     Sexo: " +dad1.getSexo() + 
+                   "\nReside com: " +dad1.getReside() + "   Telefone: " +dad1.getTelefone() +
+                   "\nNascimento em: " +dad1.getDataDeNascimento() + "      Natural de: " +dad1.getNaturalidade() +
+                   "    UF: " +dad1.getUf() + "\nCertidão de nascimento Nº: " +dad1.getCertidaoDeNascimento() +
+                   "    Folha Nº: " +dad1.getFolha() + "    Livro Nº: " +dad1.getLivro() + 
+                   "    RG: " +dad1.getRg() + "    Orgão expedidor: " +dad1.getOrgaoExpedidor() + 
+                   "    Data de expedição: " +dad1.getDataDeExpedicao() + "\nCPF: " +dad1.getCpf());
             }
         }    
-    }
+    } //FIM DO METODO LISTAR ALUNOS
 
-    @Override
+    @Override //INÍCIO DO METODO EXCLUIR ALUNOS
     public void excuir() {
-        int cont =0;
+        int cont = 0;
         System.out.println("Digite o nome a ser perquisado pra excluir ");
         String resp = in.nextLine();
         for (Dados dad1 : dad) {
@@ -109,7 +117,7 @@ public class Alunos extends Dados implements Funcionalidades{
             }
         }
 if(cont == 0){
-             System.out.println("o nome não corresponde a nenhum resgistro ");
+             System.out.println("O nome não corresponde a nenhum resgistro ");
         }
-    }
+    } //FIM DO METODO EXCLUIR ALUNO
 }

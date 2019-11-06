@@ -7,14 +7,11 @@
  */
 package projetofinaldecurso;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Conservix
  */
 public class Mae extends Dados implements Funcionalidades{
-    Scanner in = new Scanner(System.in);
     
     //METODO CONSTRUTOR
     public Mae() {
@@ -26,7 +23,7 @@ public class Mae extends Dados implements Funcionalidades{
     } //FIM DO METODO
     
     //FUNCIONALIDADES INTERFACE
-    @Override
+    @Override //INÍCIO DO METODO CADASTRAR
     public void cadastrar() {
         for (Dados dad1 : dad) {
             if (dad1 != null) {
@@ -37,6 +34,8 @@ public class Mae extends Dados implements Funcionalidades{
                 dad1.setRua(in.nextLine());
                 System.out.println("Número: ");
                 dad1.setNumero(Integer.parseInt(in.nextLine()));
+                System.out.println("Bairro: ");
+                dad1.setBairro(in.nextLine());
                 System.out.println("RG: ");
                 dad1.setRg(Double.parseDouble(in.nextLine()));
                 System.out.println("Orgão expedidor: ");
@@ -53,34 +52,43 @@ public class Mae extends Dados implements Funcionalidades{
                 }
             }
         }
-    }
+    } //FIM DO METODO CADASTRAR
 
-    @Override
+    @Override //INICIO DO METODO BUSCAR
     public void buscar() {
         int cont =0;
         System.out.println("Digite o nome a ser perquisado ");
         String resp = in.nextLine();
         for(Dados dad1 : dad){
         if(resp.equals(dad1.getNome()) ){
-           System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
+           System.out.println("Nome: " + dad1.getNome() + "\nRua: " +dad1.getRua() +
+                   "    Número R.: " +dad1.getNumero() + "\nBairro: " +dad1.getBairro() +
+                   "\nRG: " +dad1.getRg() + "   Orgão Expedidor: " +dad1.getOrgaoExpedidor() +
+                   "    Data de Expedição: " +dad1.getDataDeExpedicao() +
+                   "\nCPF: " +dad1.getCpf() + "\nProfição: " +dad1.getProfisao());
         cont ++;
         }
         }if(cont == 0){
              System.out.println("o nome não corresponde a nenhum resgistro ");
         }
-    }
+    } //FIM DO METODO BUSCAR
 
-    @Override
+    @Override //INICIO DO METODO LISTAR
     public void listar() {
+        System.out.println("#### LISTA DE TODOS AS MÃES CADASTRADAS ####");
         for (Dados dad1 : dad) {
             if (dad1.getNome() != null) {
-                System.out.println("_______________");
-            System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
+                System.out.println("_______________________");
+                System.out.println("Nome: " + dad1.getNome() + "\nRua: " +dad1.getRua() +
+                   "    Número R.: " +dad1.getNumero() + "\nBairro: " +dad1.getBairro() +
+                   "\nRG: " +dad1.getRg() + "   Orgão Expedidor: " +dad1.getOrgaoExpedidor() +
+                   "    Data de Expedição: " +dad1.getDataDeExpedicao() +
+                   "\nCPF: " +dad1.getCpf() + "\nProfição: " +dad1.getProfisao());
             }
         }
-    }
+    } //FIM DO METODO LISTAR
 
-    @Override
+    @Override //INICIO DO METODO EXCLUIR
     public void excuir() {
         int cont =0;
         System.out.println("Digite o nome a ser perquisado pra excluir ");
@@ -98,5 +106,5 @@ public class Mae extends Dados implements Funcionalidades{
 if(cont == 0){
              System.out.println("o nome não corresponde a nenhum resgistro ");
         }
-    }
+    } //FIM DO METODO EXCLUIR
 }

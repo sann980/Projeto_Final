@@ -7,32 +7,34 @@
  */
 package projetofinaldecurso;
 
-import java.util.Scanner;
 /**
  *
  * @author Conservix
  */
 public class Pai extends Dados implements Funcionalidades{
     
-    Scanner in = new Scanner(System.in);
-    
 //  METODO CONSTRUTOR
     public Pai() {
          for(int i = 0; i<dad.length; i++){
             dad[i] = new Dados();
-            
         }
         this.res = false;
     }   //FIM DO METODO
 
     //FUNCIONALIDADES INTERFACE
-    @Override
+    @Override //INÍCIO DO METODO CADASTRAR
     public void cadastrar() {
         for (Dados dad1 : dad) {
             if (dad1 != null) {
                 res= false;
-                System.out.println("Nome do Pai:");
+                System.out.println("Nome da mãe:");
                 dad1.setNome(in.nextLine());
+                System.out.println("Rua: ");
+                dad1.setRua(in.nextLine());
+                System.out.println("Número: ");
+                dad1.setNumero(Integer.parseInt(in.nextLine()));
+                System.out.println("Bairro: ");
+                dad1.setBairro(in.nextLine());
                 System.out.println("RG: ");
                 dad1.setRg(Double.parseDouble(in.nextLine()));
                 System.out.println("Orgão expedidor: ");
@@ -40,7 +42,7 @@ public class Pai extends Dados implements Funcionalidades{
                 System.out.println("Data de expedição: ");
                 dad1.setDataDeExpedicao(in.nextLine());
                 System.out.println("CPF: ");
-                dad1.setCpf(Double.parseDouble(in.nextLine()));
+                setCpf(Double.parseDouble(in.nextLine()));
                 System.out.println("Profissão: ");
                 dad1.setProfisao(in.nextLine());
                 this.Quebra_Loop();
@@ -49,34 +51,43 @@ public class Pai extends Dados implements Funcionalidades{
                 }
             }
         }
-    }
+    } //FIM DO METODO CADASTRAR
 
-    @Override
+    @Override //INÍCIO DO METODO BUSCAR
     public void buscar() {
         int cont =0;
         System.out.println("Digite o nome a ser perquisado ");
         String resp = in.nextLine();
         for(Dados dad1 : dad){
         if(resp.equals(dad1.getNome()) ){
-           System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
+           System.out.println("Nome: " + dad1.getNome() + "\nRua: " +dad1.getRua() +
+                   "    Número R.: " +dad1.getNumero() + "\nBairro: " +dad1.getBairro() +
+                   "\nRG: " +dad1.getRg() + "   Orgão Expedidor: " +dad1.getOrgaoExpedidor() +
+                   "    Data de Expedição: " +dad1.getDataDeExpedicao() +
+                   "\nCPF: " +dad1.getCpf() + "\nProfição: " +dad1.getProfisao());
         cont ++;
         }
         }if(cont == 0){
              System.out.println("o nome não corresponde a nenhum resgistro ");
         }
-    }
+    } //FIM DO METODO bUSCAR
 
-    @Override
+    @Override //INÍCIO DO METODO LISTAR
     public void listar() {
+        System.out.println("#### LISTA DE TODOS OS PAIS CADASTRADOS ####");
         for (Dados dad1 : dad) {
             if (dad1.getNome() != null) {
                 System.out.println("_______________");
-            System.out.println("Nome: " + dad1.getNome() + "\nRG:" + dad1.getRg() + "\tCPF: " + dad1.getCpf() +"\nProfissão: " +dad1.getProfisao());
+            System.out.println("Nome: " + dad1.getNome() + "\nRua: " +dad1.getRua() +
+                   "    Número R.: " +dad1.getNumero() + "\nBairro: " +dad1.getBairro() +
+                   "\nRG: " +dad1.getRg() + "   Orgão Expedidor: " +dad1.getOrgaoExpedidor() +
+                   "    Data de Expedição: " +dad1.getDataDeExpedicao() +
+                   "\nCPF: " +dad1.getCpf() + "\nProfição: " +dad1.getProfisao());
             }
         }
-    }
+    } //FIM DO METODO LISTAR
 
-    @Override
+    @Override //INÍCIO DO METODO EXCLUIR
     public void excuir() {
         int cont =0;
         System.out.println("Digite o nome a ser perquisado pra excluir ");
@@ -94,5 +105,5 @@ public class Pai extends Dados implements Funcionalidades{
 if(cont == 0){
              System.out.println("o nome não corresponde a nenhum resgistro ");
         }
-    }
+    } //FIM DO METODO EXCLUIR
 }

@@ -16,4 +16,5 @@ public interface Funcionalidades {
     public void buscar();
     public void listar();
     public void excuir();
+    
 }

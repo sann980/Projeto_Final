@@ -18,16 +18,23 @@ public class ProjetoFinalDeCurso {
         // TODO code application logic here
         
         Alunos ca = new Alunos();
-        Funcionarios cf = new Funcionarios();
         Mae cm = new Mae();
         Pai cp = new Pai();
         ResponsavelContratual cr = new ResponsavelContratual();
+        CadastroCursos b = new CadastroCursos();
+        Cursos h = new Cursos();
         
-        ca.cadastrar();
+        b.cadastrar();
+        b.listar();
+        b.buscar();
+        b.excuir();
+        b.listar();
+        /*ca.cadastrar();
         ca.listar();
         ca.buscar();
         ca.excuir();
         ca.buscar();
-        ca.listar();
+        ca.listar();*/
+       
     }
 }

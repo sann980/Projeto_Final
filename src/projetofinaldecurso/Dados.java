@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Conservix
  */
 public class Dados extends DadosCadastrais{
-   
+    Scanner in = new Scanner(System.in);
     Dados dad[] = new Dados[10]; 
    
     //Metodos SETs e GETs
@@ -215,9 +215,6 @@ public class Dados extends DadosCadastrais{
         return rua;
     }
     
-    // Metodos funcoes
-Scanner in = new Scanner(System.in);
-
      // mtedo pra quebra um loop
     protected void Quebra_Loop(){
          String a ="s"; 
@@ -228,5 +225,5 @@ Scanner in = new Scanner(System.in);
             res = true;   
         }else
              System.out.println("Adicionando outro");
-        }
+        } //FIM DO METODO
 }

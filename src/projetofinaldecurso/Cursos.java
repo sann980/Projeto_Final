@@ -7,32 +7,17 @@
  */
 package projetofinaldecurso;
 
-import java.util.Scanner;
-
 /**
  *
  * @author lima
  */
-public class Cursos implements Funcionalidades{
+public class Cursos{
     //ATRIBUTOS
-    private int NumCurso;
-    private double valor ;
+    private int numCurso;
     private String nomeDoCurso;
-    private int duracao ;
-    private String Professor;
-    private int QuantVagas;
-    private String turno;
+    private double valor;
+    private int duracao;
     
-    Scanner in = new Scanner(System.in);
-Cursos curso[] = new Cursos [10]; //ISTANCIANDO UM NOVO VETOR DO TIPO CURSOS
-
-    //METODO CONSTRUTOR
-    public Cursos() {
-        for(int i = 0 ;i < curso.length; i++){
-            curso[i]= new Cursos();
-        }
-    }      //FIM DO METODO
-
     //METODOS GETs E SETs
     public double getValor() {
         return valor;
@@ -58,48 +43,12 @@ Cursos curso[] = new Cursos [10]; //ISTANCIANDO UM NOVO VETOR DO TIPO CURSOS
         this.duracao = duracao;
     }
 
-    public String getProfessor() {
-        return Professor;
+    public void setNumCurso(int numCurso) {
+        this.numCurso = numCurso;
     }
 
-    public void setProfessor(String Professor) {
-        this.Professor = Professor;
+    public int getNumCurso() {
+        return numCurso;
     }
-
-    public int getQuantVagas() {
-        return QuantVagas;
-    }
-
-    public void setQuantVagas(int QuantVagas) {
-        this.QuantVagas = QuantVagas;
-    }
-
-    public String getTurno() {
-        return turno;
-    }
-
-    public void setTurno(String turno) {
-        this.turno = turno;
-    }
-
-    //CUNCIONALIDADES DA INTERFACE
-    @Override
-    public void cadastrar() {
-        
-    }
-
-    @Override
-    public void buscar() {
-        
-    }
-
-    @Override
-    public void listar() {
-        
-    }
-
-    @Override
-    public void excuir() {
-        
-    }
+    
 }
