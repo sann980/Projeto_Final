@@ -13,10 +13,10 @@ package projetofinaldecurso;
  */
 public class Cursos{
     //ATRIBUTOS
-    private int numCurso;
     private String nomeDoCurso;
     private double valor;
     private int duracao;
+    private String turno;
     
     //METODOS GETs E SETs
     public double getValor() {
@@ -43,12 +43,12 @@ public class Cursos{
         this.duracao = duracao;
     }
 
-    public void setNumCurso(int numCurso) {
-        this.numCurso = numCurso;
+    public String getTurno() {
+        return turno;
     }
 
-    public int getNumCurso() {
-        return numCurso;
+    public void setTurno(String turno) {
+        this.turno = turno;
     }
-    
+        
 }
