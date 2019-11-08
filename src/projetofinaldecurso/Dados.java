@@ -7,15 +7,11 @@
  */
 package projetofinaldecurso;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Conservix
  */
-public class Dados extends DadosCadastrais{
-    Scanner in = new Scanner(System.in);
-    Dados dad[] = new Dados[10]; 
+public class Dados extends DadosCadastrais{ 
    
     //Metodos SETs e GETs
     public void setNome(String nome) {
@@ -65,10 +61,6 @@ public class Dados extends DadosCadastrais{
     public void setReside(String reside) {
         this.reside = reside;
     }
-
-    public void setRes(boolean res) {
-        this.res = res;
-    }
     
     //METODOS GETs
     public String getNome() {
@@ -108,11 +100,11 @@ public class Dados extends DadosCadastrais{
     }
 
     public String getProfisao() {
-        return profisao;
+        return profissao;
     }
 
     public void setProfisao(String profisao) {
-        this.profisao = profisao;
+        this.profissao = profisao;
     }
 
     public String getOrgaoExpedidor() {
@@ -129,14 +121,6 @@ public class Dados extends DadosCadastrais{
 
     public void setDataDeExpedicao(String dataDeExpedicao) {
         this.dataDeExpedicao = dataDeExpedicao;
-    }
-
-    public int getCodigoDeMatricula() {
-        return codigoDeMatricula;
-    }
-
-    public void setCodigoDeMatricula(int codigoDeMatricula) {
-        this.codigoDeMatricula = codigoDeMatricula;
     }
 
     public String getDataDeNascimento() {
@@ -179,11 +163,11 @@ public class Dados extends DadosCadastrais{
         this.folha = folha;
     }
 
-    public String getLivro() {
+    public int getLivro() {
         return livro;
     }
 
-    public void setLivro(String livro) {
+    public void setLivro(int livro) {
         this.livro = livro;
     }
 
@@ -193,10 +177,6 @@ public class Dados extends DadosCadastrais{
 
     public String getReside() {
         return reside;
-    }
-
-    public boolean isRes() {
-        return res;
     }
 
     public void setNumero(int numero) {
@@ -214,16 +194,5 @@ public class Dados extends DadosCadastrais{
     public String getRua() {
         return rua;
     }
-    
-     // mtedo pra quebra um loop
-    protected void Quebra_Loop(){
-         String a ="s"; 
-       System.out.println("Deseja adiociona outro (Se sim digite qualquer teclar //n pra sair) ");
-                a =  in.nextLine();
-        if("n".equals(a)||"N".equals(a)) {
-           System.out.println("Saindo....");
-            res = true;   
-        }else
-             System.out.println("Adicionando outro");
-        } //FIM DO METODO
+
 }

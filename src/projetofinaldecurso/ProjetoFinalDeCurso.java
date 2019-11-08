@@ -11,12 +11,15 @@ package projetofinaldecurso;
  */
 public class ProjetoFinalDeCurso {
 
-    /**
+    /** 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        FichaMat f = new FichaMat();
        
+    f.cadastrarFicha("", "", "", 0, "", "", "", "", 0, 0, 0, "", "", 0, "", "", 0, "", 0, "", "", 0, "", "", "", 0, "", 0, "", "", 0, "", "", 0, 0, "", "", 0, 0, "", 0);
+    f.buscarFicha("");
+    f.excluirFicha("");
     }
 }

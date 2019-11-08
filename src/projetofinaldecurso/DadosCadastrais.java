@@ -27,13 +27,12 @@ public abstract class DadosCadastrais{
     protected String bairro;
     protected String cidade;
     protected String estado;
-    protected String profisao;
+    protected String profissao;
     protected String orgaoExpedidor;
     protected String dataDeExpedicao;
-    protected int codigoDeMatricula;
     protected String naturalidade;
     protected String certidaoDeNascimento;
     protected int folha;
-    protected String livro;
-    protected boolean res ;
+    protected int livro;
+    
 }

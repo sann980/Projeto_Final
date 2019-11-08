@@ -17,6 +17,7 @@ public class Cursos{
     private double valor;
     private int duracao;
     private String turno;
+    private float valorMensalidade;
     
     //METODOS GETs E SETs
     public double getValor() {
@@ -49,6 +50,15 @@ public class Cursos{
 
     public void setTurno(String turno) {
         this.turno = turno;
+    }
+
+    public float getValorMensalidade() {
+        return valorMensalidade;
+    }
+
+    public void setValorMensalidade(float valorMensalidade) {
+        valorMensalidade = (float) (this.getValor()/12);
+        this.valorMensalidade = valorMensalidade;
     }
         
 }
