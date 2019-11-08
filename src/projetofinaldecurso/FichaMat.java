@@ -19,7 +19,7 @@ public class FichaMat{
         this.id=1;
     }
     
-    //INICIO DO METODO CADASTRAR
+    //INÍCIO DO METODO CADASTRAR
     public void cadastrarFicha(String nome, String sexo, String reside, double telefone, 
                     String dataDeNascimento, String naturalidade, String uf, 
                     String certidaoDeNascimento, int folha, int livro, double rg,
@@ -57,10 +57,10 @@ public class FichaMat{
         ficha.setResponsavel(responsavel);
         fichaCadastro.add(ficha);
         this.id++;
-        System.out.println("Deu certo mano!");
         
     } //FIM DO METODO CADASTRAR
     
+    //INÍCIO DO METODO BUSCAR
     public void buscarFicha(String nome){
         for (int i = 0; i<fichaCadastro.size(); i++) {
             if(nome.equals(fichaCadastro.get(i).getAluno().nome));
@@ -68,19 +68,24 @@ public class FichaMat{
             fichaCadastro.get(i).getAluno();
             fichaCadastro.get(i).getPai();
             fichaCadastro.get(i).getMae();
-            fichaCadastro.get(i).getResponsavel();
-            System.out.println("Deu certo mano!");
-            
+            fichaCadastro.get(i).getResponsavel();            
         }
-    }
+    } //FIM DO METODO BUSCAR
     
+    //INÍCIO DO METODO EXCLUIR
     public void excluirFicha(String nome){
         for(int i = 0; i<fichaCadastro.size(); i++){
         if(nome.equals(fichaCadastro.get(i).getAluno().nome)){
             fichaCadastro.remove(i);
         }
-        System.out.println("deu certo mano!");
         }
-    }
+    } //FIM DO METODO EXCLUIR
     
+    //INÍCIO DO METODO LISTAR
+    public void listar( String nome, int numero){
+        for(int i = 0; i<fichaCadastro.size(); i++){
+            nome = fichaCadastro.get(i).getAluno().nome;
+            numero = fichaCadastro.get(i).getNumeroMatricula();
+        }
+    } //FIM DO METODO LISTAR
 }
